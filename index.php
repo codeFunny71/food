@@ -22,5 +22,14 @@ $f3->route('GET /',
     }
 );
 
+//Define a breakfast route
+$f3->route('GET /breakfast',
+     function() {
+        echo '<h1>I love breakfast</h1>';
+        $view = new View();
+        echo $view->render('views/home.html');
+    }
+    );
+
 //Run fat free
 $f3->run();
